@@ -15,7 +15,7 @@ function displayMeals(meals) {
     const mealsContainer = document.getElementById('mealsContainer');
     mealsContainer.innerHTML = ''; 
 
-    const limitedMeals = meals.slice(0, 12);
+    const limitedMeals = meals.slice(0, 14);
 
     limitedMeals.forEach(meal => {
         const mealCard = document.createElement('div');
