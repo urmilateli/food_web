@@ -1,0 +1,365 @@
+body {
+    background-color: rgb(36, 22, 22);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.meal {
+    background-color: rgb(29, 21, 16);
+    color: rgb(233, 124, 14);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 50px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.buttons button {
+    color: white;
+    background-color: rgb(211, 42, 42);
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+.welcome-section {
+    justify-content: center;
+    text-align: center;
+    max-width: 500px;
+}
+
+.meal-img, .meal-imgc {
+    width: 100px;
+}
+
+.Total {
+    margin: 20px;
+}
+
+.meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.meal-card {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    color: rgb(237, 232, 232);
+}
+
+.meal-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.meal-detail-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.meal-detail-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    border-radius:3px;
+}
+#con{
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     margin-top: 30px;
+}
+#Bro{
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 30px;
+ }
+
+ #sra1 {
+    display: flex;                   
+    flex-wrap: wrap;               
+    justify-content: center;         
+    margin-left: 300px;             
+    margin-right: 300px;  
+    gap:5px;
+}
+
+.flag {
+    width: 100px;                   
+    height: auto;                   
+    margin: 0;                      
+    padding: 0;                    
+}
+
+#sra1 .flag:nth-child(5),
+#sra1 .flag:nth-child(6) {
+    flex: 0 0 100%;                 
+    display: flex;                 
+    justify-content: center;       
+}
+.alphabet {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.letter {
+    color: #FBB03B; 
+   
+}
+
+.slash {
+    color: white; 
+}
+
+
+.footer {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgb(27, 12, 1);
+    padding: 10px 0;
+    margin: 0; 
+    height: auto; 
+    font-size: 14px; 
+    color: white;
+    height: 100px;
+}
+
+.footer p, .Socials p {
+    padding: 0; 
+    line-height: 1; 
+}
+
+.Socials {
+    display: flex;
+    justify-content: center; 
+}
+
+.footer p {
+    margin: 0 10px; 
+}
+
+.Socials p {
+    margin: 0 10px; 
+}
+.meal-imgc {
+    max-width: 200px; 
+    height: auto; 
+   width: 200px;
+}
+.meal-img{
+    max-width: 200px; 
+    height: auto; 
+   width: 200px;
+}
+
+.stats {
+    display: flex;           
+    justify-content: center; 
+    gap: 30px;               
+}
+#search {
+    font-size: 20px;
+    padding: 9px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none; 
+    
+    
+}
+#searchButton{
+    font-size: 20px;
+    padding: 9px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+#line{
+    width: 80%;
+    height: 3px;
+    background-color: rgb(255,255,255);
+    border: none;
+    margin: 20px 0;
+    align-items: center;
+    margin-left: 160px;
+    margin-top: 25px;
+}
+
+.Total {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+#search {
+    font-size: 20px;
+    padding: 9px 10px;
+    margin-right: 10px; 
+    border-radius: 5px;
+    border: none;
+}
+
+#searchButton {
+    font-size: 20px;
+    padding: 9px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer; 
+}
+
+.paypal-button {
+    color: rgb(141, 14, 173);
+    background-color: rgb(188, 215, 11);
+    font-size: 25px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+
+.stats h4 {
+    margin: 5px 0; 
+    color: white;
+}
+
+.meal {
+    background-color: rgb(29, 21, 16);
+    color: rgb(233, 124, 14);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 50px;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    height: auto;
+    margin-left: 200px;
+}
+.buttons {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 10px; 
+   
+}
+
+.buttons button {
+    margin: 0 10px; 
+    font-size: 16px; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 18px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .meal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meal-img, .meal-imgc {
+        max-width: 80%;
+    }
+
+    .meal-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .welcome-section {
+        max-width: 90%;
+    }
+}
+
+
+.meal-detail-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+body.no-scroll.blur-background {
+    filter: blur(5px); 
+}
+
+.meal-detail-content {
+    background-color: black;
+    padding: 30px;
+    width: 80%; 
+    max-height: 90%; 
+    color: rgb(170, 150, 150);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-y: auto; 
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+

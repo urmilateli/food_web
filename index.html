@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="meal">
+        <img src="logo-small .png" alt="Logo" class="logo">
+        <div class="buttons">
+            <button onclick="fetchMeals()">Home</button>
+            <button onclick="filterByCost('low')">Low Cost</button>
+            <button onclick="filterByCost('high')">Upper Cost</button>
+        </div>
+    </div>
+    <div class="content">
+        <img src="meal-icon.png" alt="Plate-left" class="meal-img">
+        <div class="welcome-section">
+            <h1>Welcome to TheMealDB</h1>
+            <p>Welcome to TheMealDB: An open, crowd-sourced database of recipes from around the world.  We also offer a
+            <a href="/api.php" style="color: rgb(245, 154, 7);">Free recipe API</a> for anyone wanting to use it, with additional features for subscribers.</p>
+            <button class="paypal-button" onclick="windeo". >PayPal</button>
+            <p>Click button above to upgrade to premium.</p>
+            <p>$3 a month and cancel anytime. Currently 54 supporters</p>
+        </div>
+        <img src="meal-icon.png" alt="Plate-right" class="meal-imgc">
+    </div>
+    <hr id="line">
+    <div class="Total">
+        <div class="search-container">
+        <input type="search" placeholder="Search for a meal..." id="search">
+        <button id="searchButton" onclick="searchMeal()">Search</button>
+    </div>
+        <div class="stats">
+            <h4 id="pr"><img src="meal-icon6.png" alt="icon"> Total Meals: 303</h4>
+            <h4 id="pra"><img src="meal-icon4.png" alt="icon"> Total Ingredients: 575</h4>
+            <h4 id="praa"><img src="image2.png" alt="icon"> Images: 303</h4>
+        </div>
+    </div>
+     <hr id="line">
+
+    <div class="meals" id="mealsContainer"></div>
+
+    <div class="meal-detail-overlay" id="mealDetailOverlay">
+        <div class="meal-detail-content" id="mealDetailContent">
+            <button class="close-button" id="closeOverlay">Close</button>
+            <div id="mealDetail"></div>
+        </div>
+    </div>
+
+
+
+
+    <div>
+        <hr id="line">
+    </div>
+    <div>
+        <h3 id="con">Browse Country</h3>
+    </div>
+    <div id="sra1">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/gb.png" id="sr1">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/us.png" id="sr2">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/fr.png" id="sr3">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/ca.png" id="sr4">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/jm.png" id="sr5">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/cn.png" id="sr6">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/nl.png" id="sr7">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/eg.png" id="sr8">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/gr.png"  id="sr9">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/in.png" id="sr10">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/ie.png" id="sr11">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/it.png" id="sr12"> 
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/jp.png" id="sr13">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/kn.png" id="sr14">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/my.png" id="sr15">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/mx.png" id="sr16">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/ma.png" id="sr17">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/hr.png" id = "sr18">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/no.png" id="sr19">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/pt.png" id="sr20">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/ru.png" id="sr21">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/ar.png" id ="sr22">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/es.png" id="sr23">
+       <img src="https://www.themealdb.com/images/icons/flags/big/64/sk.png" id="sr25">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/th.png" id="sr26">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/sa.png" id="sr27">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/vn.png" id="sr28">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/tr.png" id="sr29">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/sy.png" id="sr30">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/dz.png" id ="sr31">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/tn.png" id="sr32">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/pl.png" id="sr33">
+        <div id="sar2">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/ph.png"  id ="sr35">
+        <img src="https://www.themealdb.com/images/icons/flags/big/64/UA.png" id="sr36">
+        </div>
+    </div>
+   
+
+    <div>
+        <h3 id="Bro"> Browse By Name</h3>
+    </div>
+    <div class="alphabet">
+        <span class="letter">A</span>
+        <span class="slash">/</span>
+        <span class="letter">B</span>
+        <span class="slash">/</span>
+        <span class="letter">C</span>
+        <span class="slash">/</span>
+        <span class="letter">D</span>
+        <span class="slash">/</span>
+        <span class="letter">E</span>
+        <span class="slash">/</span>
+        <span class="letter">F</span>
+        <span class="slash">/</span>
+        <span class="letter">G</span>
+        <span class="slash">/</span>
+        <span class="letter">H</span>
+        <span class="slash">/</span>
+        <span class="letter">I</span>
+        <span class="slash">/</span>
+        <span class="letter">J</span>
+        <span class="slash">/</span>
+        <span class="letter">K</span>
+        <span class="slash">/</span>
+        <span class="letter">L</span>
+        <span class="slash">/</span>
+        <span class="letter">M</span>
+        <span class="slash">/</span>
+        <span class="letter">N</span>
+        <span class="slash">/</span>
+        <span class="letter">O</span>
+        <span class="slash">/</span>
+        <span class="letter">P</span>
+        <span class="slash">/</span>
+        <span class="letter">Q</span>
+        <span class="slash">/</span>
+        <span class="letter">R</span>
+        <span class="slash">/</span>
+        <span class="letter">S</span>
+        <span class="slash">/</span>
+        <span class="letter">T</span>
+        <span class="slash">/</span>
+        <span class="letter">U</span>
+        <span class="slash">/</span>
+        <span class="letter">V</span>
+        <span class="slash">/</span>
+        <span class="letter">W</span>
+        <span class="slash">/</span>
+        <span class="letter">X</span>
+        <span class="slash">/</span>
+        <span class="letter">Y</span>
+        <span class="slash">/</span>
+        <span class="letter">Z</span>
+    </div>
+    
+
+  <br>
+  <br>
+
+    
+  <div class="footer">
+   <div class="DB">
+   <p>2024 TheMealDB</p>
+   <p>Proudly built in the UK</p>
+   <img src="https://www.themealdb.com/images/icons/flags/big/16/gb.png">
+   </div>
+   <div class="Socials">
+     <p>Socials:</p>
+    <p><img src="https://www.themealdb.com/images/facebook_icon.png" onclick="window.open('https://www.facebook.com/TheDataDB/')">
+    <img src="https://www.themealdb.com/images/twitter_icon.png" onclick="window.open('https://x.com/i/flow/login?redirect_after_login=%2FTheAudioDB')">
+    <img src="https://www.themealdb.com/images/discord_icon.png" onclick="window.open('https://discord.com/invite/pFvgaXV')"></p>
+    <p>
+     <img src="https://www.themealdb.com/images/logo-tcdb.png" onclick="window.open('https://www.thecocktaildb.com/')">
+     <img src="https://www.themealdb.com/images/logo-tadb.png" onclick="window.open('https://www.theaudiodb.com/')">
+     <img src="https://www.themealdb.com/images/logo-tsdb.png" onclick="window.open('https://www.thesportsdb.com/')">
+    </p>
+   </div>
+   <div class="faq">
+     <p>About  Faq  Contact</p>
+   </div>
+  </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
